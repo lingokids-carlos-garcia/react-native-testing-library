@@ -8,4 +8,7 @@ module.exports = {
   ],
   snapshotSerializers: ['@relmify/jest-serializer-strip-ansi/always'],
   clearMocks: true,
+  fakeTimers: {
+    enableGlobally: true,
+  },
 };
