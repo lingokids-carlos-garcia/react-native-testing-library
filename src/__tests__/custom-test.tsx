@@ -19,6 +19,14 @@ const MyComponent = () => {
 };
 
 describe('component updates state on mount with async function', () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   describe('relying on waitFor to process component updates', () => {
     test('should render component', async () => {
       render(<MyComponent />);
